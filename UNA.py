@@ -1,27 +1,39 @@
-# -*- coding: utf-8 -*-
-
+# REMAKEBOT
+# BOT SC HERE
 from linepy import *
 from akad.ttypes import Message
 from akad.ttypes import ContentType as Type
-from gtts import gTTS
-from time import sleep
+from akad.ttypes import ChatRoomAnnouncementContents
+from akad.ttypes import ChatRoomAnnouncement
 from datetime import datetime, timedelta
+from time import sleep
 from bs4 import BeautifulSoup
-from googletrans import Translator
 from humanfriendly import format_timespan, format_size, format_number, format_length
-import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, urllib, urllib3, urllib.parse, traceback, atexit, subprocess
-
-cl = RIDEN()
-#cl = RIDEN(authTokenRFU="Ev49wbWDciJuzQi8UG6e.mDIRQD+WthuKlYOGL7ITRG.pAFPZhYHHPSFjqOGUkKn9dqHCER/ZNDUDgOBpLrWJe4=")   #PH-13
-cl.log("YOUR TOKEN : {}".format(str(cl.authToken)))
-channel = RIDENChannel(cl,cl.server.CHANNEL_ID['LINE_TIMELINE'])
-cl.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
-
-ririnMid = cl.profile.mid
-ririnProfile = cl.getProfile()
-ririnSettings = cl.getSettings()
-ririnPoll = OEPoll(cl)
-#call = LineCall(cl)
+import time, random, sys, json, codecs, threading, glob, re, string, os, requests, subprocess, six, ast, pytz, urllib, urllib.parse, ffmpy, wikipedia, atexit, datetime, pafy, youtube_dl
+_session = requests.session()
+from gtts import gTTS
+from googletrans import Translator
+#==============================================================================================================
+botStart = time.time()
+#==============================================================================================================
+client = LINE ()
+#client = LINE ("Ev49wbWDciJuzQi8UG6e.mDIRQD+WthuKlYOGL7ITRG.pAFPZhYHHPSFjqOGUkKn9dqHCER/ZNDUDgOBpLrWJe4=")   #PH-13
+#==============================================================================================================
+readOpen = codecs.open("read.json","r","utf-8")
+settingsOpen = codecs.open("temp.json","r","utf-8")
+stickersOpen = codecs.open("sticker.json","r","utf-8")
+imagesOpen = codecs.open("image.json","r","utf-8")
+#==============================================================================================================
+mid = client.getProfile().mid
+#==============================
+clientMID = client.profile.mid
+#==============================
+clientProfile = client.getProfile()
+#==============================================================================================================
+clientSettings = client.getSettings()
+#==============================================================================================================
+clientPoll = OEPoll(client)
+#==============================================================================================================
 creator = ["ue1e44f13de7e46d116bd67ee6696b038"]
 owner = ["u65fe96fab708f00336be92e000af3611"]
 admin = ["u65fe96fab708f00336be92e000af3611"]
