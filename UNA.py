@@ -11,8 +11,11 @@ from googletrans import Translator
 from humanfriendly import format_timespan, format_size, format_number, format_length
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, urllib, urllib3, urllib.parse, traceback, atexit, subprocess
 
-cl = LINE("EwqOBMyMVdpT4sNWvx51.zF6w/RCi8am2VPlGak82eq.SSof5oi5xsOZFKOOM7IdBgZSGPIg6id9cgm27oAt+eg=")
-#cl = LINE("Ev49wbWDciJuzQi8UG6e.mDIRQD+WthuKlYOGL7ITRG.pAFPZhYHHPSFjqOGUkKn9dqHCER/ZNDUDgOBpLrWJe4=")   #PH-13
+cl = RIDEN()
+#cl = RIDEN(authTokenRFU="Ev49wbWDciJuzQi8UG6e.mDIRQD+WthuKlYOGL7ITRG.pAFPZhYHHPSFjqOGUkKn9dqHCER/ZNDUDgOBpLrWJe4=")   #PH-13
+cl.log("YOUR TOKEN : {}".format(str(cl.authToken)))
+channel = RIDENChannel(cl,cl.server.CHANNEL_ID['LINE_TIMELINE'])
+cl.log("CHANNEL TOKEN : " + str(channel.getChannelResult()))
 
 ririnMid = cl.profile.mid
 ririnProfile = cl.getProfile()
