@@ -1,0 +1,18 @@
+{
+    "autoadd": false,
+    "autojoin": true,
+    "autoread": false,
+    "protect": false,
+    "protectguest": false,
+    "protectqr": false,    
+    "larangan": false,    
+    "unsendMessage": false,
+    "autoscan": false,
+    "cancel": false,    
+    "RAbatas":{"on":true,"members":1},
+    "RAmessage": "http://line.me/ti/p/%40wbp9844b 」",
+    "message1": "Selamat datang...lgsung intro aj ya",
+    "readMember": {},
+    "blacklist": {},   
+    "readPoint": {}
+}
