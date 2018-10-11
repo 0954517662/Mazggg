@@ -16,35 +16,35 @@ from googletrans import Translator
 #==============================================================================================================
 botStart = time.time()
 #==============================================================================================================
-client = LINE ()
-#client = LINE ("Ev49wbWDciJuzQi8UG6e.mDIRQD+WthuKlYOGL7ITRG.pAFPZhYHHPSFjqOGUkKn9dqHCER/ZNDUDgOBpLrWJe4=")   #PH-13
+cl = LINE ()
+#cl = LINE ("")
 #==============================================================================================================
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
 stickersOpen = codecs.open("sticker.json","r","utf-8")
 imagesOpen = codecs.open("image.json","r","utf-8")
 #==============================================================================================================
-mid = client.getProfile().mid
+mid = cl.getProfile().mid
 #==============================
-clientMID = client.profile.mid
+clMID = cl.profile.mid
 #==============================
-clientProfile = client.getProfile()
+clProfile = cl.getProfile()
 #==============================================================================================================
-clientSettings = client.getSettings()
+clSettings = cl.getSettings()
 #==============================================================================================================
-clientPoll = OEPoll(client)
+clPoll = OEPoll(cl)
 #==============================================================================================================
-creator = ["ue1e44f13de7e46d116bd67ee6696b038"]
-owner = ["u65fe96fab708f00336be92e000af3611"]
-admin = ["u65fe96fab708f00336be92e000af3611"]
-staff = ["u65fe96fab708f00336be92e000af3611"]
+creator = [""]
+owner = [""]
+admin = [""]
+staff = [""]
 KAC = [cl]
 #ABC = [ki,kk,kc,km,kb]
 #Bots = [mid]
 Saints = admin + staff
 botStart = time.time()
 
-print ("╔═════════════════════════\n║╔════════════════════════\n║╠❂➣ DNA BERHASIL LOGIN\n║╚════════════════════════\n╚═════════════════════════")
+print ("╔═════════════════════════\n║╔════════════════════════\n║╠❂➣ SELFBOT-BY:MAX\n║╚════════════════════════\n╚═════════════════════════")
 
 msg_dict = {}
 
